@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.30320.27
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DigitalSimulation", "DigitalSimulation\DigitalSimulation.csproj", "{E2AD2B8F-74E7-4C2D-B017-4AF535DB7961}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DigitalSimulationTest", "DigitalSimulationTest\DigitalSimulationTest.csproj", "{3D41AF4E-5621-4F16-9DA7-D98C80172CB7}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{E2AD2B8F-74E7-4C2D-B017-4AF535DB7961}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E2AD2B8F-74E7-4C2D-B017-4AF535DB7961}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E2AD2B8F-74E7-4C2D-B017-4AF535DB7961}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E2AD2B8F-74E7-4C2D-B017-4AF535DB7961}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3D41AF4E-5621-4F16-9DA7-D98C80172CB7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3D41AF4E-5621-4F16-9DA7-D98C80172CB7}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3D41AF4E-5621-4F16-9DA7-D98C80172CB7}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3D41AF4E-5621-4F16-9DA7-D98C80172CB7}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {CA34C7E5-BC05-4732-A82C-07B743408966}
+	EndGlobalSection
+EndGlobal
