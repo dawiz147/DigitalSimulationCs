@@ -6,8 +6,24 @@ using System.Threading.Tasks;
 
 namespace DigitalSimulation
 {
-    class packet
+    public class Packet
     {
+        private int id_package_;
+        private double time_to_enter_the_buffer_;
+        private double time_of_exiting_the_buffor_;
+        private double time_of_exiting_the_channel_;
+        private int LR_=0;
 
+
+        public Packet(int id,double create_time)
+        {
+            id_package_ = id;
+            time_to_enter_the_buffer_ = create_time;
+        }
+        public double GetID { get => id_package_; }
+        public void SaveTimeExitingTheBuffor(double time) {  time_of_exiting_the_buffor_ = time; } 
+        public void SaveTimeExitingTheChannel(double time) {  time_of_exiting_the_channel_ = time; }
+        public double GetTimeBufforBuffor { get => time_of_exiting_the_buffor_ - time_to_enter_the_buffer_; }
+        public double GetTimeBufforChannel { get => time_of_exiting_the_channel_- time_to_enter_the_buffer_; }
     }
 }
