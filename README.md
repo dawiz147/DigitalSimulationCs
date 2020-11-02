@@ -5,3 +5,14 @@ In the wireless network, broadcasting stations compete for access to the link. A
 **CGPk** - a random variable with an exponential distribution of intensity L.  
 **CTPk** - a random variable with a uniform distribution between {1, 2, ..., 10} ms  
 **CTIZ** = 1 ms  
+Use the simulation to determine:  
+- [ ] The value of parameter L, which will provide an average packet error rate (averaged over K receivers) of no more than 0.1, then:  
+- [ ] packet error rate in each receiver measured by dividing the number of packets lost by the number of transmitted packets,
+by the average number of retransmitted packets,  
+- [ ] system throughput measured by the number of correctly received packets per unit of time,
+by the average delay of the packet, i.e. the time between the packet appearing in the buffer and its correct reception,  
+- [ ] average waiting time, i.e. the time between the packet appearing in the buffer and leaving it  
+- [ ] Make a graph of the dependence of the average number of packet retransmissions on parameter P  
+- [ ] Make a graph of the relationship between the system throughput and the average and maximum packet error rate depending on the value of L.
+
+
