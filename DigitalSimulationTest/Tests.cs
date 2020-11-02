@@ -24,6 +24,9 @@ namespace DigitalSimulationTest
             Assert.AreEqual(packet.GetID(), id_package);
             Assert.AreEqual(packet.GetTimeBufforBuffor(), 4.1, 0.001);
             Assert.AreEqual(packet.GetTimeBufforChannel(), 9.3, 0.001);
+            Assert.AreEqual(packet.GetLR(), 0);
+            packet.IncrementLR();
+            Assert.AreEqual(packet.GetLR(), 1);
         }
     }
 }
