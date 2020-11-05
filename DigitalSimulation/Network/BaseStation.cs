@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 using Packet;
 namespace BaseStation
 {
-    class BaseStation
+    public class BaseStation
     {
         private int id_;
         private Queue<Packet.Packet> packet_buffer_;//=new Queue<Packet.Packet>();
@@ -31,6 +31,18 @@ namespace BaseStation
         public Packet.Packet GetPacketFromBuffer()
         {
           return packet_buffer_.Dequeue();
+        }
+        public void AddPacketToRetransmission(Packet.Packet packet)
+        {
+            packet_to_retransmission_ = packet;
+        }
+        public Packet.Packet GetPackageToRetransmission()
+        {
+            return packet_to_retransmission_;
+        }
+        public int GetIdBaseStation()
+        {
+            return id_;
         }
     }
 }
