@@ -8,7 +8,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace DigitalSimulation.Properties
+namespace WirelessNetwork.Properties
 {
 
 

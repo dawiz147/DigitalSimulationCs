@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace DigitalSimulation
+namespace Packet
 {
     public class Packet
     {
@@ -47,7 +47,5 @@ namespace DigitalSimulation
         private double time_of_exiting_the_channel_;
         private int LR_=0;
 
-
-        
     }
 }

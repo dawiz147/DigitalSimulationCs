@@ -1,6 +1,6 @@
 using Microsoft.VisualStudio.TestTools.UnitTesting;
-using DigitalSimulation;
-
+using Packet;
+using WirelessNetwork;
 namespace DigitalSimulationTest
 {
     [TestClass]
@@ -9,7 +9,7 @@ namespace DigitalSimulationTest
         [TestMethod]
         public void TestGenerateIdForPackage()
         {
-            var network = new DigitalSimulation.WirelessNetwork();
+            var network = new WirelessNetwork.WirelessNetwork();
             network.GenerateNewIdForPackage();
             Assert.AreEqual(network.ID, 0);
         }
@@ -18,7 +18,7 @@ namespace DigitalSimulationTest
         public void TestPackage()
         {
            int id_package = 10;
-            var packet = new DigitalSimulation.Packet(id_package,1.2);
+            var packet = new Packet.Packet(id_package,1.2);
             packet.SaveTimeExitingTheBuffor(5.3);
             packet.SaveTimeExitingTheChannel(10.5);
             Assert.AreEqual(packet.GetID(), id_package);
