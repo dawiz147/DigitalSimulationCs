@@ -4,15 +4,16 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace DigitalSimulation
+namespace Packet
 {
     public class Packet
     {
-        public Packet(int id, double create_time)
+        public Packet(int id,double create_time)
         {
             id_package_ = id;
             time_to_enter_the_buffer_ = create_time;
         }
+
         public double GetID()
         {
             return id_package_;
@@ -47,7 +48,5 @@ namespace DigitalSimulation
         private double time_of_exiting_the_channel_;
         private int LR_=0;
 
-
-        
     }
 }
