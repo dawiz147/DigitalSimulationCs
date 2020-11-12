@@ -1,7 +1,6 @@
 using Microsoft.VisualStudio.TestTools.UnitTesting;
-using Packet;
-using WirelessNetwork;
-using BaseStation;
+using DigitalSimulation;
+
 namespace DigitalSimulationTest
 {
     [TestClass]
@@ -10,33 +9,29 @@ namespace DigitalSimulationTest
         [TestMethod]
         public void TestPackageID()
         {
-            var packet = new Packet.Packet(0,1.2);
-            Assert.AreEqual(packet.GetID(), 0);
-            var packet2 = new Packet.Packet(1,1.2);
-            Assert.AreEqual(packet2.GetID(), 1);
+            var packet = new Packet(0,1.2);
+            Assert.AreEqual(packet.Id_package_, 0);
+            var packet2 = new Packet(1,1.2);
+            Assert.AreEqual(packet2.Id_package_, 1);
         }
         [TestMethod]
         public void TestPackageTimeBufforBuffor()
         {
-            var packet = new Packet.Packet(1, 1.2);
-            packet.SaveTimeExitingTheBuffor(5.3);
-            packet.SaveTimeExitingTheChannel(10.5);
-            Assert.AreEqual(packet.GetTimeBufforBuffor(), 4.1, 0.001);
+            var packet = new Packet(1, 1.2);
+            packet.Time_of_exiting_the_buffor_ = 4.2;
+            Assert.AreEqual(packet.GetTimeBufforBuffor(), 3.0, 0.001);
         }
         [TestMethod]
         public void TestPackageTimeBufforChannel()
         {
-            var packet = new Packet.Packet(1, 1.2);
-            packet.SaveTimeExitingTheChannel(10.5);
+            var packet = new Packet(1, 1.2);
+            packet.Time_of_exiting_the_channel_ = 10.5;
             Assert.AreEqual(packet.GetTimeBufforChannel(), 9.3, 0.001);
-            Assert.AreEqual(packet.GetLR(), 0);
-            packet.IncrementLR();
-            Assert.AreEqual(packet.GetLR(), 1);
         }
         [TestMethod]
         public void TestPackageLR()
         {
-            var packet = new Packet.Packet(1, 1.2);
+            var packet = new Packet(1, 1.2);
             Assert.AreEqual(packet.GetLR(), 0);
             packet.IncrementLR();
             Assert.AreEqual(packet.GetLR(), 1);
@@ -50,19 +45,19 @@ namespace DigitalSimulationTest
         [TestMethod]
         public void TestBaseStationClassID()
         {
-            var station = new BaseStation.BaseStation(1);
-            Assert.AreEqual(station.GetIdBaseStation(), 1);
+            var station = new BaseStation(1);
+            Assert.AreEqual(station.Id_, 1);
 
         }
         [TestMethod]
         public void TestBaseStationBuffer()
         {
-            var station = new BaseStation.BaseStation(1);
+            var station = new BaseStation(1);
             Assert.AreEqual(station.GetSizeBuffer(), 0);
-            var packet = new Packet.Packet(1,1.2);
-            station.AddPacketToBuffer(packet);
+            var packet = new Packet(1,1.2);
+            station.AddPacket(packet);
             Assert.AreEqual(station.GetSizeBuffer(), 1);
-            var packet2 = station.GetPacketFromBuffer();
+            var packet2 = station.GetPacket();
             Assert.AreEqual(station.GetSizeBuffer(), 0);
         }
     }
@@ -72,7 +67,7 @@ namespace DigitalSimulationTest
         [TestMethod]
         public void TestGenerateIdForPackage()
         {
-            var network = new WirelessNetwork.WirelessNetwork();
+            var network = new WirelessNetwork();
             network.GenerateNewIdForPackage();
             Assert.AreEqual(network.ID, 0);
         }

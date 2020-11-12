@@ -4,35 +4,41 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Packet
+namespace DigitalSimulation
 {
     public class Packet
     {
         public Packet(int id,double create_time)
         {
-            id_package_ = id;
-            time_to_enter_the_buffer_ = create_time;
+            Id_package_ = id;
+            Time_to_enter_the_buffer_ = create_time;
         }
 
-        public double GetID()
-        {
-            return id_package_;
+        public int Id_package_ 
+        { 
+            get; 
         }
-        public void SaveTimeExitingTheBuffor(double time)
+        public double Time_of_exiting_the_buffor_
         {
-            time_of_exiting_the_buffor_ = time;
+            private get;
+            set;
         }
-        public void SaveTimeExitingTheChannel(double time)
+        public double Time_to_enter_the_buffer_
         {
-            time_of_exiting_the_channel_ = time;
+            get;
+        }
+        public double Time_of_exiting_the_channel_
+        {
+            private get;
+            set;
         }
         public double GetTimeBufforBuffor()
         {
-            return time_of_exiting_the_buffor_ - time_to_enter_the_buffer_;
+            return Time_of_exiting_the_buffor_ - Time_to_enter_the_buffer_;
         }
         public double GetTimeBufforChannel()
         {
-            return time_of_exiting_the_channel_ - time_to_enter_the_buffer_;
+            return Time_of_exiting_the_channel_ - Time_to_enter_the_buffer_;
         }
         public void IncrementLR()
         {
@@ -42,10 +48,7 @@ namespace Packet
         {
             return LR_;
         }
-        private int id_package_;
-        private double time_to_enter_the_buffer_;
-        private double time_of_exiting_the_buffor_;
-        private double time_of_exiting_the_channel_;
+
         private int LR_=0;
 
     }

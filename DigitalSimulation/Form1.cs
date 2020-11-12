@@ -8,7 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace WirelessNetwork
+namespace DigitalSimulation
 {
     public partial class Form1 : Form
     {

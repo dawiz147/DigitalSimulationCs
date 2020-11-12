@@ -1,4 +1,4 @@
-﻿namespace WirelessNetwork
+﻿namespace DigitalSimulation
 {
     partial class Form1
     {

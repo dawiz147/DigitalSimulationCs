@@ -46,6 +46,8 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Interfaces\IPacketRetranssmisionService.cs" />
+    <Compile Include="Interfaces\IPacketService.cs" />
     <Compile Include="Network\BaseStation.cs" />
     <Compile Include="Form1.cs">
       <SubType>Form</SubType>
